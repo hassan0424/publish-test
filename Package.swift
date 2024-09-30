@@ -35,16 +35,22 @@ let package = Package(
     targets: [
         .binaryTarget(name: "ShopLiveCorePlayer",
                       path: "./Frameworks/ShopLiveCorePlayerSDK.xcframework"),
+        
         .binaryTarget(name: "ShopLiveHLSPlayer",
                       path: "./Frameworks/ShopLiveHLSPlayerSDK.xcframework"),
+        
         .binaryTarget(name: "ShopLiveWebRTCPlayerSDK",
-                      path: "./Frameworks/ShopLiveWebRTCHelperSDK.xcframework"),
+                      path: "./Frameworks/ShopLiveWebRTCPlayerSDK.xcframework"),
+        
         .binaryTarget(name: "ShopLiveWebRTCHelperSDK",
-                      path: "./Frameworks/ShopLiveSDK.xcframework"),
+                      path: "./Frameworks/ShopLiveWebRTCHelperSDK.xcframework"),
+        
         .binaryTarget(name: "ShopLiveShortformSDK",
                       path: "./Frameworks/ShopLiveShortformSDK.xcframework"),
+        
         .binaryTarget(name: "ShopliveSDKCommon",
                       path: "./Frameworks/ShopliveSDKCommon.xcframework"),
+        
         .binaryTarget(name: "WebRTC",
                       path: "./Frameworks/WebRTC.xcframework")
         
