@@ -1,0 +1,107 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopLiveWebRTCPlayerSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVKit
+import DeveloperToolsSupport
+import Foundation
+import MediaPlayer
+import ShopLiveCorePlayerSDK
+import ShopLiveWebRTCHelperSDK
+import ShopliveSDKCommon
+import Swift
+import SwiftUI
+import UIKit
+import WebKit
+import WebRTC
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum ShopLiveWebRTCPlayerSDKAsset {
+  public static let closebutton: ShopLiveWebRTCPlayerSDK.ShopLiveWebRTCPlayerSDKImages
+}
+public struct ShopLiveWebRTCPlayerSDKImages {
+  public var name: Swift.String {
+    get
+  }
+  public typealias Image = UIKit.UIImage
+  public var image: ShopLiveWebRTCPlayerSDK.ShopLiveWebRTCPlayerSDKImages.Image {
+    get
+  }
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  public var swiftUIImage: SwiftUI.Image {
+    get
+  }
+}
+extension UIKit.UIImage {
+  @available(macOS, deprecated, message: "This initializer is unsafe on macOS, please use the ShopLiveWebRTCPlayerSDKImages.image property")
+  convenience public init?(asset: ShopLiveWebRTCPlayerSDK.ShopLiveWebRTCPlayerSDKImages)
+}
+@available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+extension SwiftUI.Image {
+  public init(asset: ShopLiveWebRTCPlayerSDK.ShopLiveWebRTCPlayerSDKImages)
+  public init(asset: ShopLiveWebRTCPlayerSDK.ShopLiveWebRTCPlayerSDKImages, label: SwiftUI.Text)
+  public init(decorative asset: ShopLiveWebRTCPlayerSDK.ShopLiveWebRTCPlayerSDKImages)
+}
+@_inheritsConvenienceInitializers @objc public class ShopLiveWebRTCPlayerSDKResources : ObjectiveC.NSObject {
+  @objc public class var bundle: Foundation.Bundle {
+    @objc get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum ShopLiveWebRTCPlayerSDKStrings {
+  public enum Chat {
+    public static let placeholder: Swift.String
+    public enum Send {
+      public static let title: Swift.String
+    }
+  }
+  public enum Share {
+    public enum Url {
+      public enum Empty {
+        public static let error: Swift.String
+        public static let message: Swift.String
+      }
+    }
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class RTCPlayerViewModel : ShopLiveCorePlayerSDK.ShopLiveBasePlayerViewModel {
+  override public func onRetryOnNetworkDisConnect()
+  override public func onSetSoundMuteStateOnWebViewSetConf()
+  override public func onSetSoundMute(isMuted: Swift.Bool, needToSendToWeb: Swift.Bool)
+  override public func onTearDownViewModel()
+  override public func onInitRtc(url: Foundation.URL?)
+  override public func onResetPlayer()
+  override public func onSetRtcDiscoveryUrl(url: Foundation.URL?)
+  override public func onSetRtcSignallingUrl(url: Foundation.URL?)
+  override public func onSetRtcResolution(resolution: Swift.String)
+  override public func onSetRtcStreamingRetryCount(count: Swift.Int)
+  override public func onSetRtcStreamingRetryInterval(interval: Swift.Double)
+  override public func onRefreshRtcConnection()
+  override public func onRequestShowOrHideLoadingView(needToShow: Swift.Bool)
+  override public func onAudioSessionObserverSetIsMuted(isMuted: Swift.Bool)
+  override public func onNetworkMonitorCurrentNetworkCapabilityChangedToDisconnected()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class ShopLiveWebRTCPlayer : ObjectiveC.NSObject {
+  @objc public static var sdkVersion: Swift.String {
+    @objc get
+  }
+  @objc public static func getRTCPlayerView() -> ShopLiveWebRTCPlayerSDK.ShopLiveRTCPlayerView
+  @objc public static func getRTCPlayerViewModel(stateContainer: any ShopLiveCorePlayerSDK.ShopLivePlayerStateContainer) -> ObjectiveC.NSObject
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ShopLiveRTCPlayerView : UIKit.UIView, ShopLiveCorePlayerSDK.ShopLiveRTCPlayerViewInterface, ShopLiveCorePlayerSDK.ShopLiveHLSPlayerViewInterface {
+  @_Concurrency.MainActor(unsafe) public var rtcResultHanlder: ((ShopLiveCorePlayerSDK.ShopLiveRTCPlayerViewResult) -> ())?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) public func rtcAction(_ action: ShopLiveCorePlayerSDK.ShopLiveRTCPlayerViewAction)
+  @_Concurrency.MainActor(unsafe) public func getOsDisplayLayer() -> AVFoundation.AVSampleBufferDisplayLayer?
+  @_Concurrency.MainActor(unsafe) public func getInAppDisplayLayerVideoGravity() -> AVFoundation.AVLayerVideoGravity?
+  @_Concurrency.MainActor(unsafe) public var hlsResultHandler: ((ShopLiveCorePlayerSDK.ShopLiveHLSPlayerViewResult) -> ())?
+  @_Concurrency.MainActor(unsafe) public func hlsAction(_ action: ShopLiveCorePlayerSDK.ShopLiveHLSPlayerViewAction)
+  @_Concurrency.MainActor(unsafe) public func getAVPlayer() -> AVFoundation.AVPlayer?
+  @_Concurrency.MainActor(unsafe) public func getPlayerLayer() -> AVFoundation.AVPlayerLayer?
+}
