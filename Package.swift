@@ -9,16 +9,20 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "ShopLiveCorePlayerSDK",
+            type: .dynamic,
             targets: ["ShopLiveCorePlayer"]),
         
         .library(
             name: "ShopLiveHLSPlayerSDK",
+            type: .dynamic,
             targets: ["ShopLiveHLSPlayer"]),
         
         .library(name: "ShopLiveWebRTCPlayerSDK",
+                 type: .dynamic,
                  targets: ["ShopLiveWebRTCPlayerSDK"]),
         
         .library(name: "ShopLiveWebRTCHelperSDK",
+                 type: .dynamic,
                  targets: ["ShopLiveWebRTCHelperSDK"]),
         
         .library(name: "WebRTC",
