@@ -23,9 +23,14 @@ let package = Package(
         
         .library(name: "WebRTC",
                  targets: ["WebRTC"]),
+        
         .library(
             name: "ShopliveSDKCommon",
             targets: ["ShopliveSDKCommon"]),
+        
+        .library(
+                name: "ShopliveShortformSDK",
+                targets: ["ShopLiveShortformSDK"])
     ],
     targets: [
         .binaryTarget(name: "ShopLiveCorePlayer",
