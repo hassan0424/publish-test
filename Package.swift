@@ -18,8 +18,8 @@ let package = Package(
         .library(name: "ShopLiveWebRTCPlayerSDK",
                  targets: ["ShopLiveWebRTCPlayer"]),
         
-        .library(name: "ShopLiveWebRTCHelper",
-                 targets: ["ShopLiveWebRTCHelperSDK"]),
+        .library(name: "ShopLiveWebRTCHelperSDK",
+                 targets: ["ShopLiveWebRTCHelper"]),
         
         .library(name: "WebRTC",
                  targets: ["WebRTC"]),
