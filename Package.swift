@@ -8,17 +8,17 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "ShopLiveCorePlayerSDK",
+            name: "ShopLiveCorePlayer",
             targets: ["ShopLiveCorePlayerSDK"]),
         
         .library(
-            name: "ShopLiveHLSPlayerSDK",
+            name: "ShopLiveHLSPlayer",
             targets: ["ShopLiveHLSPlayerSDK"]),
         
-        .library(name: "ShopLiveWebRTCPlayerSDK",
+        .library(name: "ShopLiveWebRTCPlayer",
                  targets: ["ShopLiveWebRTCPlayerSDK"]),
         
-        .library(name: "ShopLiveWebRTCHelperSDK",
+        .library(name: "ShopLiveWebRTCHelper",
                  targets: ["ShopLiveWebRTCHelperSDK"]),
         
         .library(name: "WebRTC",
